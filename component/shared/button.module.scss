@@ -1,0 +1,22 @@
+$buttonColor:#4285F4;
+
+@mixin button($width,$height,$font-size) {
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+    background-color: $buttonColor;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    color:#ffffff;
+    cursor: pointer;
+}
+
+.button_login{
+    @include button(316px,48px,14px)
+}
+
+.button_submit{
+    @include button(220px,67px,22px)
+}
+

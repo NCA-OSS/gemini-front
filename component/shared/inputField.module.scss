@@ -1,0 +1,22 @@
+
+@mixin inputField($width,$height,$font-size) {
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    color:#ffffff;
+
+        // To be removed
+        padding-top: 20px;
+}
+
+.inputField_login{
+    @include inputField(316px,42px,14px)
+}
+
+.inputField_standard{
+    @include inputField(229px,24.8px,20px)
+}
+
