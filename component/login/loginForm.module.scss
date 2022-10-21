@@ -1,11 +1,75 @@
+$background-color:#363740;
+$font-family: 'Mulish', sans-serif;
+
 .centerLogo {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 30px;
 }
 
 .loginRectangle{
     width: 380px;
     height: 746px;
-    background-color:#999999;
+    background-color:#ffffff;
+    position:static;
+    bottom:0px;
+    right:0px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+.inputEmail{
+    padding-top: 0px;
+    padding-left: 50px;
+    position: static;
+}
+
+.inputPassword{
+    padding-top: 0px;
+    padding-left: 50px;
+    position: static;
+}
+
+.loginButton{
+    padding-top: 50px;
+    padding-left: 50px;
+    position: static;
+}
+
+
+.emailTitle{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 12px;
+    font-family: $font-family;
+    color:#999999;
+}
+
+
+.noAccount{
+    margin-top: 70px;
+    padding-left: 50px;
+    font-size: 14px;
+    color: #999999;
+    font-family: $font-family;
+    text-align: center;
+}
+
+.downloadInstructions{
+    padding-left: 50px;
+    font-size: 14px;
+    color: #3751FF;
+    font-family: $font-family;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.showPassword{
+    display: flex;
+    align-items:flex-end;
+    padding-top: 30px;
 }

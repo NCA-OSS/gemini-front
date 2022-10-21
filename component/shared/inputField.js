@@ -7,7 +7,7 @@ import styles from './inputField.module.scss';
 export function InputFieldLogin() {
     return (
       <Box component="form">
-        <TextField className={styles.inputField_login} variant="outlined" />
+        <TextField className={styles.inputField_login} variant="outlined" label=""/>
       </Box>
     );
   }
