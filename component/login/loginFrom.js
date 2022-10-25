@@ -15,17 +15,17 @@ export default function LoginForm() {
                 <div> <LoginTitle/></div>
 
                 <div className={styles.emailTitle}><h3>EMAIL</h3></div>
-                <div className={styles.inputEmail}><InputFieldLogin/></div>
+                <div className={styles.inputEmail}><InputFieldLogin labelName="Email address"/></div>
 
                 <div className={styles.emailTitle}><h3>PASSWORD</h3></div>
-                <div className={styles.inputPassword}><InputFieldLogin/>
+                <div className={styles.inputPassword}><InputFieldLogin labelName="Password"/>
                     {/* For show password icon */}
                     {/* <div>
                         <Image className={styles.showPassword} src="/assets/SVGFiles/Icons/Eye Close" alt="showpassword" width={20} height={20}/>
                     </div> */}
                 </div>
 
-                <div className={styles.loginButton}><ButtonLogin/> </div>
+                <div className={styles.loginButton}><ButtonLogin titleName="Login"/> </div>
 
                 <div className={styles.noAccount}>Don't have an account ?</div>
                 <div className={styles.downloadInstructions}>Download Instructions</div>

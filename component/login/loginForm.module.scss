@@ -12,7 +12,7 @@ $font-family: 'Mulish', sans-serif;
     width: 380px;
     height: 746px;
     background-color:#ffffff;
-    position:static;
+    position:relative;
     bottom:0px;
     right:0px;
     margin: 0 auto;
@@ -41,7 +41,7 @@ $font-family: 'Mulish', sans-serif;
 
 
 .emailTitle{
-    padding-top: 50px;
+    padding-top: 20px;
     padding-left: 50px;
     font-size: 12px;
     font-family: $font-family;
@@ -91,4 +91,45 @@ $font-family: 'Mulish', sans-serif;
     font-weight: bold;
     padding-top: 30px;
     padding-left: 50px;
+}
+
+
+.checkEmailPopUpRectangle{
+    width: 1023px;
+    height: 872px;
+    background-color:#ffffff;
+    border-radius: 8px;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkEmailFont{
+    text-align: center;
+    font-size: 40px;
+    font-family: $font-family;
+    color:#000000;
+    font-weight: bold;
+}
+
+.checkEmailFontDesc{
+    text-align: center;
+    font-size: 25px;
+    font-family: $font-family;
+    color:#000000;
+    padding: 50px;
+}
+
+.closeTab{
+    text-align: center;
+    font-size: 25px;
+    font-family: $font-family;
+    color:#999999;
+    padding: 50px;
+}
+
+
+.outlookPadding{
+    padding-top: 127px;
 }
