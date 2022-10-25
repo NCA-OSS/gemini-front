@@ -73,3 +73,22 @@ $font-family: 'Mulish', sans-serif;
     align-items:flex-end;
     padding-top: 30px;
 }
+
+
+// Title SCSS
+
+.loginTitleHeading{
+    font-size: 24px;
+    font-family: $font-family;
+    text-align: center;
+}
+
+
+.centerTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-left: 50px;
+}

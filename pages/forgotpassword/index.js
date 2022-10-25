@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import LoginForm from '../component/login/loginFrom'
+
+import ForgotPassword from '../../component/login/forgotpassword';
 
 import React, { useState, useEffect } from 'react';
 
 
-import styles from './index.module.scss';
+import styles from '../index.module.scss';
 
 export default function Home() {
 
@@ -14,7 +15,7 @@ export default function Home() {
 
   return (
     <body className={styles.loginBackground}>
-      <LoginForm/>
+      <ForgotPassword/>
 
     </body>
   )
