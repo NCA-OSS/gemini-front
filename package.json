@@ -20,6 +20,9 @@
     "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
     "reactjs-popup": "^2.0.5",
+    "react-feather": "^2.0.10",
+    "react-icons": "^4.6.0",
+    "react-router-dom": "^6.4.2",
     "sass": "^1.55.0"
   },
   "devDependencies": {
