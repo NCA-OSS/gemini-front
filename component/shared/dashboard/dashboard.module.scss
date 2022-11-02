@@ -1,20 +1,15 @@
-.MuiTableRow-root>*{
-    padding : 10px;
-}
-
-.MuiTableRow-root.MuiTableRow-head>*{
-    font-weight: bold !important;
-}
-
-.Table td, th{
-    border: none !important;
-}
-
-.Table:first-child{
-    border-radius: 0.7rem !important;
-}
-
 .priority{
-    padding: 3px;
-    border-radius: 4px;
+    color: WHITE;
+    padding: 4px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px !important;
+}
+
+.miniCell{
+    background-color: #DFE0EB;
+    border-bottom: 1px groove;
 }
