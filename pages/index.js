@@ -1,11 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
+//React
+import React, { useState, useEffect } from 'react';
+
+//Component
 import LoginForm from '../component/login/loginFrom'
 
+//Style
+import styles from './index.module.scss';
+
 export default function Home() {
+
+
   return (
-    <div>
-      <LoginForm />
+    <div className={styles.loginBackground}>
+      <LoginForm/>
+
     </div>
   )
 }
