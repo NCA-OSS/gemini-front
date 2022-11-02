@@ -1,14 +1,9 @@
 //React
 import React, { useState, useEffect } from 'react';
 
-//Package
-import Head from 'next/head'
-import Image from 'next/image'
-
 //Component
 import UpdatePassword from '../../../component/login/updatepassword';
-//Setup in project "component/login/forgotpassword" importing component through component/
-
+//Setup in project "component/login/updatepassword" importing component through component/
 
 //Style
 import styles from '../../index.module.scss'

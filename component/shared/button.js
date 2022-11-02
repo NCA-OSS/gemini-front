@@ -1,21 +1,15 @@
-import styles from './button.module.scss';
+//React
 import {useState,useEffect} from 'react';
 
+//Component
 import CheckEmailPopUp from '../login/checkEmailPopUp'
 import PasswordResetSuccess from '../login/passwordResetSuccess'
 
+//Style
+import styles from './button.module.scss';
+
+
 export function ButtonLogin(props) {
-
-  // const initialText = 'Login'
-  // const [buttonText, setButtonText] = useState(initialText);
-
-  // function handleClick(){
-  //   setButtonText('Send Email');
-
-  //   setTimeout(() => {
-  //     setButtonText(initialText);
-  //   }, 1000); //after 1 second revert button back to original text 
-  // }
     return (
         // <button  type="submit" className={styles.button_login} onClick={handleClick}>{buttonText}</button>
         <button  type="submit" className={styles.button_login} >{props.titleName}</button>
@@ -33,13 +27,6 @@ export function ButtonLogin(props) {
     }
 
       return (
-        <div>
-          {/* <div>
-            <button  type="submit" className={styles.button_login} disabled>
-              {props.titleName}
-            </button>
-          </div> */}
-
           <div>
           <button  
           type="submit" 
@@ -50,8 +37,6 @@ export function ButtonLogin(props) {
             {isCheckEmailShown && <CheckEmailPopUp />}
           </button>
           </div>
-
-        </div>
       );
       
     }

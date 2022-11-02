@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import LoginForm from '../component/login/loginFrom'
-
+//React
 import React, { useState, useEffect } from 'react';
 
+//Component
+import LoginForm from '../component/login/loginFrom'
 
+//Style
 import styles from './index.module.scss';
 
 export default function Home() {

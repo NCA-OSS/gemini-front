@@ -1,28 +1,24 @@
+//React
+import React,{useState} from 'react';
+
+//Package
 import Image from 'next/image';
 
-import styles from './loginForm.module.scss';
-
+//Component
 import {InputFieldLogin} from '../shared/inputField';
 import {ButtonSendEmail}  from '../shared/button';
-
-import React,{useEffect, useState} from 'react';
-
 import LoginTitle from './loginTitle';
 
-import Link from '@mui/material/Link';
+//Style
+import styles from './loginForm.module.scss';
 
 export default function ForgotPassword(){
 
     const [data, setData] = useState(true);
 
-    // const childToParent = (childData) => {
-    //     setData(childData); //should be true until valid email 
-    // }   
-
-    // useEffect(()=>{
-    //     console.log('Button disabled ?: ',data);
-    // });
-    
+    const something=()=>{
+        setData();
+    }
 
     return (
         <div className={styles.loginRectangle}>

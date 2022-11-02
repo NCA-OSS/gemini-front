@@ -1,6 +1,11 @@
+//React
 import React from 'react'
-import styles from './loginForm.module.scss';
+
+//Package
 import Image from 'next/image';
+
+//Style
+import styles from './loginForm.module.scss';
 
 export default function CheckEmailPopUp() {
     

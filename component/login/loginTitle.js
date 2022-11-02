@@ -1,3 +1,4 @@
+//Style
 import styles from './loginTitle.module.scss'
 
 export default function LoginTitle(props) {

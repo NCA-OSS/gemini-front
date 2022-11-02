@@ -1,7 +1,14 @@
+//React
 import React from 'react'
-import styles from './loginForm.module.scss';
+
+//Package
 import Image from 'next/image';
+
+//Component
 import LoginTitle from './loginTitle';
+
+//Style
+import styles from './loginForm.module.scss';
 
 export default function PasswordResetSuccess() {
     

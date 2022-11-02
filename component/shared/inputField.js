@@ -1,9 +1,14 @@
+//React
 import * as React from 'react';
+import { useState } from 'react';
+
+//Package
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+
+//Style
 import styles from './inputField.module.scss';
 
-import { useState } from 'react';
 
 export function InputFieldLogin({setData}) {
 

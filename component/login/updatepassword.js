@@ -1,13 +1,17 @@
-import Image from 'next/image';
-
-import styles from './loginForm.module.scss';
-
-import {InputFieldLoginPassword} from '../shared/inputField';
-import {ButtonUpdatePassword}  from '../shared/button';
-
+//React
 import React,{useState} from 'react';
 
+//Package
+import Image from 'next/image';
+
+//Component
+import {InputFieldLoginPassword} from '../shared/inputField';
+import {ButtonUpdatePassword}  from '../shared/button';
 import LoginTitle from './loginTitle';
+
+//Style
+import styles from './loginForm.module.scss';
+
 
 export default function UpdatePassword(){
 

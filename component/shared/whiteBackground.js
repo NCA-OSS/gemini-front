@@ -1,4 +1,7 @@
+//React
 import React from 'react'
+
+//Style
 import styles from './whiteBackground.module.scss'
 
 export default function WhiteBackground (){

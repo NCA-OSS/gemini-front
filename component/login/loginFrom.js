@@ -1,14 +1,22 @@
-import Image from 'next/image';
-import styles from './loginForm.module.scss';
+//React
+import React,{useState} from 'react';
 
+//Package
+import Image from 'next/image';
+import Link from '@mui/material/Link';
+
+//Component
 import {InputFieldLogin,InputFieldLoginPassword} from '../shared/inputField';
 import {ButtonLogin}  from '../shared/button';
 import LoginTitle from './loginTitle';
 
-import Link from '@mui/material/Link';
+//Style
+import styles from './loginForm.module.scss';
 
 
 export default function LoginForm() {
+
+    const [data, setData] = useState(true);
     return (
         
             <div className={styles.loginRectangle}>
@@ -17,7 +25,7 @@ export default function LoginForm() {
                 <div> <LoginTitle titleText="Log In to Resource Management System"/></div>
 
                 <div className={styles.emailTitle}><h3>EMAIL</h3></div>
-                <div className={styles.inputEmail}><InputFieldLogin labelName="Email address"/></div>
+                <div className={styles.inputEmail}><InputFieldLogin setData={setData}/></div>
 
                 <div className={styles.row}>
                     <div className={styles.columnLeft}>
