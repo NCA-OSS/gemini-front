@@ -16,9 +16,8 @@ export default function ForgotPassword(){
 
     const [data, setData] = useState(true);
 
-    const something=()=>{
-        setData();
-    }
+    //function to handle click (for cleaner code so will have 1 button for login)
+
 
     return (
         <div className={styles.loginRectangle}>

@@ -20,12 +20,12 @@ export function ButtonLogin(props) {
     //Promps up "Please Check Your Email" page when button clicked
     const [isCheckEmailShown, setIsCheckEmailShown] = useState(false);
   
-  
     const handleClick = event => {
       setIsCheckEmailShown(true);  //current => !current replace with true to come back to send email screen.
       //Later on in handleClick, check whether email present in database before allowing user to click send email.
     }
 
+  
       return (
           <div>
           <button  
@@ -42,6 +42,8 @@ export function ButtonLogin(props) {
     }
 
     export function ButtonUpdatePassword(props) {
+      // const {titleName} = props
+
       //Promps up "Please Check Your Email" page when button clicked
       const [isUpdatePasswordShown, setIsUpdatePasswordShown] = useState(false);
     
