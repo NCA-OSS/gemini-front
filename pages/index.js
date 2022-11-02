@@ -9,13 +9,11 @@ import styles from './index.module.scss';
 
 export default function Home() {
 
-  const [count, setCount] = useState(0);
-
 
   return (
-    <body className={styles.loginBackground}>
+    <div className={styles.loginBackground}>
       <LoginForm/>
 
-    </body>
+    </div>
   )
 }

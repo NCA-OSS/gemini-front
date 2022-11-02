@@ -1,5 +1,4 @@
 import React from 'react'
-import WhiteBackground from '../shared/whiteBackground';
 import styles from './loginForm.module.scss';
 import Image from 'next/image';
 

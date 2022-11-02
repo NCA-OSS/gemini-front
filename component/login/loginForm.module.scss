@@ -21,6 +21,7 @@ $font-family: 'Mulish', sans-serif;
     padding-right: 50px;
 }
 
+
 .inputEmail{
     padding-top: 0px;
     padding-left: 50px;
@@ -32,6 +33,31 @@ $font-family: 'Mulish', sans-serif;
     padding-left: 50px;
     position: static;
 }
+
+.columnLeft {
+    float: left;
+    width: 68%;
+}
+
+.columnRight {
+    float: right;
+    width: 32%;
+}
+
+.forgotPassRightAlign{
+    float:10px;
+    padding-top: 33px;
+}
+
+
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 
 .loginButton{
     padding-top: 50px;
@@ -74,13 +100,19 @@ $font-family: 'Mulish', sans-serif;
     padding-top: 30px;
 }
 
+.column {
+    float: left;
+    width: 50%;
+    }
 
-// Title SCSS
+
+// Title text SCSS
 
 .loginTitleHeading{
     font-size: 24px;
     font-family: $font-family;
     text-align: center;
+    color: #000000;
 }
 
 
@@ -132,4 +164,40 @@ $font-family: 'Mulish', sans-serif;
 
 .outlookPadding{
     padding-top: 127px;
+}
+
+
+.resetSuccessCheckIcon{
+    filter: invert(56%) sepia(94%) saturate(349%) hue-rotate(109deg) brightness(99%) contrast(87%);
+}
+
+
+.resetPasswordRectangle{
+    width: 380px;
+    height: 746px;
+    background-color:#ffffff;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding-top: 50px;
+    padding-right: 50px;
+    justify-content: center;
+}
+
+
+.resetSuccessAndTitlePadding{
+    padding-top: 80px;
+    padding-left: 50px;
+}
+
+.resetSuccessCloseTab{
+    text-align: center;
+    font-size: 19px;
+    font-family: $font-family;
+    color:#999999;
+    font-weight: lighter;
+    padding-top: 80px;
+    padding-left: 50px;
 }

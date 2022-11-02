@@ -18,3 +18,16 @@
     @include inputField(229px,24.8px,20px)
 }
 
+
+.showPasswordButton{
+    border: none;
+    background-color: #e7e7e7; 
+    color: black;
+}
+
+
+.invalidPasswordText{
+    color:red;
+    font-size: 14px;
+    padding-top: 4%;
+}

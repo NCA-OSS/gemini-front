@@ -10,10 +10,17 @@ $buttonColor:#4285F4;
     border: none;
     color:#ffffff;
     cursor: pointer;
+
+
 }
 
 .button_login{
     @include button(316px,48px,14px)
+}
+
+.button_login:disabled{
+    background-color:#999999;
+    cursor: default;
 }
 
 .button_submit{
