@@ -14,16 +14,34 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "bootstrap": "^5.2.2",
-    "next": "12.3.1",
     "node-sass": "^7.0.3",
+    "next": "12.3.1",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
     "reactjs-popup": "^2.0.5",
-    "sass": "^1.55.0"
+    "react-feather": "^2.0.10",
+    "react-icons": "^4.6.0",
+    "react-router-dom": "^6.4.2",
+    "sass": "^1.55.0",
+    "styled": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NrlFrhHaniDev/fe-resource-management-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NrlFrhHaniDev/fe-resource-management-system/issues"
+  },
+  "homepage": "https://github.com/NrlFrhHaniDev/fe-resource-management-system#readme"
 }
