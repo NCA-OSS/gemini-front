@@ -15,8 +15,6 @@ export default function Home() {
   return (
     <div className={styles.loginBackground}>
       <LoginForm />
-      <Navbar />
-      <Table />
     </div>
   )
 };

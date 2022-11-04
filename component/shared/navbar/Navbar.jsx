@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 import NavItem from "./NavItem";
 import Image from "next/image";
 import {LogOut, PieChart, User, UserPlus, Users} from "react-feather";
@@ -12,21 +12,21 @@ const MENU_LIST = [
     {
         logo: <PieChart size={23}/>,
         text: "Dashboard",
-        href: "/"
+        href: "/dashboard"
     },{
 
         logo: <Users size={23}/>,
         text: "Employee",
-        href: "/"
+        href: "/employee"
     },{
 
         logo: <User size={23}/>,
         text: "Profile",
-        href: "/"
+        href: "/profile"
     }, {
         logo:<UserPlus size={23}/>,
         text:"Add Account",
-        href:"/"
+        href:"/addAccount"
     }
 ]
 
@@ -41,7 +41,7 @@ const Navbar = () => {
     return (
         <header className={styles.navheader}>
             <nav className ={styles.nav}>
-                <Link href={"/"}>
+                <Link href={"/dashboard"}>
                     <a>
                         <div className={styles.logo}>
                             <Image src="/assets/images/2.png" alt="logo" width={200} height={45} />
