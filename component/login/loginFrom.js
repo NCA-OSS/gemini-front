@@ -23,9 +23,11 @@ export default function LoginForm() {
                 <Image src="/assets/images/RMS.png" alt="logo" width={500} height={100}/>
 
                 <div> <LoginTitle titleText="Log In to Resource Management System"/></div>
-
-                <div className={styles.emailTitle}><h3>EMAIL</h3></div>
-                <div className={styles.inputEmail}><InputFieldLogin setData={setData}/></div>
+                
+                <div>
+                    <div className={styles.emailTitle}><h3>EMAIL</h3></div>
+                    <div className={styles.inputEmail}><InputFieldLogin setData={setData}/></div>
+                </div>
 
                 <div className={styles.row}>
                     <div className={styles.columnLeft}>

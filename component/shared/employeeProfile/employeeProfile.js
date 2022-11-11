@@ -16,12 +16,15 @@ import {IconButton} from "@mui/material";
 
 import TextField from '@mui/material/TextField';
 
+import {ButtonSubmit} from '../button'
+
 //Style
 import styles from './employeeProfile.module.scss';
 
 
 const specificEmp = [
   {
+      current_status:"ACTIVE",
       name: "Tan Hong Shen 1",
       email: "hong.shen.tan@accenture.com",
       end_contract: "30-11-2022",
@@ -34,9 +37,34 @@ const specificEmp = [
       usertype:"User",
       tribe:"DICE",
       squads:["Unifi Portal","Shop Portal","Selfcare Portal"],
-      skill_sets:["React.js","Springboot","Drupal 8","Java","Angular"]
+      skill_sets:["React.js","Springboot","Drupal 8","Java","Angular","Python"],
+      isContractor: "true",
+      company:"TM",
+      country:"Singapore",
+      start_date:"01/05/2020",
+      latest_start_date:"01/05/2021",
+      latest_end_date:"01/05/2022",
+      contractor_status: "ENDED"
   }
 ]
+
+const makeStyles=(priority)=>{
+
+  if(priority === 'RESIGNED')
+  {
+      return  {
+          background: '#F12B2C',
+      }
+  }
+  else if (priority === 'ACTIVE')
+  {
+      return {
+          background : '#29CC97',
+      }
+  }
+}
+
+
 
 
 
@@ -48,23 +76,18 @@ export default function EmployeeProfile(props) {
     setUserInput(event.target.value);
   };
 
+
   return (
     <div >
       <div className={styles.row}>
-
+        {/* Add employee current_status card here */}
         <div className={styles.leftCol}>
           <h3>Personal Details</h3>
           <Paper>
             <TableContainer>
-              <Table sx={{ minWidth:100 }} size="small" aria-label="smaller table">
+              <Table sx={{[`& .${tableCellClasses.root}`]: {borderBottom: "none"}}}
+              size="small" aria-label="smaller table">
 
-                {/* <TableHead>
-                  <TableRow>
-                    <TableCell>Personal Details</TableCell>
-                    <TableCell/>
-                  </TableRow>
-                </TableHead> */}
-                
                 <TableBody>
                 {specificEmp?.map((specificEmp) => (
                   <React.Fragment>
@@ -75,6 +98,7 @@ export default function EmployeeProfile(props) {
 
                     <TableRow>
                       <TableCell variant="head">Full Name:</TableCell>
+                      {/* <TableCell>{specificEmp.full_name}</TableCell> */}
                       <TableCell>
                         <TextField value={userInput} onChange={handleChange} size="small"/>
                       </TableCell>
@@ -126,8 +150,6 @@ export default function EmployeeProfile(props) {
                         </ul>
                       </TableCell>
                     </TableRow>
-
-
                   </React.Fragment>
                 ))}
                 </TableBody>
@@ -139,6 +161,80 @@ export default function EmployeeProfile(props) {
 
           <div className={styles.rightCol}>
           <h3>Skillset</h3>
+          <Paper>
+            <TableContainer>
+              <Table sx={{[`& .${tableCellClasses.root}`]: {borderBottom: "none"}}}
+              size="small" aria-label="smaller table">
+                <TableBody>
+                {specificEmp?.map((specificEmp) => (
+                  <React.Fragment>
+                    <TableRow>
+                      <TableCell>
+                        <ul>
+                          {specificEmp.skill_sets.map(items=>(
+                            <li>{items}</li>
+                          ))}
+                        </ul>
+                      </TableCell>
+                    </TableRow>
+                  </React.Fragment>
+                ))}
+                </TableBody>
+
+              </Table>
+            </TableContainer>
+          </Paper>
+
+          <h3>Contractor Details</h3>
+          <Paper>
+            <TableContainer>
+              <Table sx={{[`& .${tableCellClasses.root}`]: {borderBottom: "none"}}}
+              size="small" aria-label="smaller table">
+                <TableBody>
+                {specificEmp?.map((specificEmp) => (
+                  <React.Fragment>
+
+                    <TableRow>
+                      <TableCell variant="head">Company:</TableCell>
+                      <TableCell>{specificEmp.company}</TableCell>
+                    </TableRow>
+
+                    <TableRow>
+                      <TableCell variant="head">Company:</TableCell>
+                      <TableCell>{specificEmp.country}</TableCell>
+                    </TableRow>   
+
+                    <TableRow>
+                      <TableCell variant="head">Start Date:</TableCell>
+                      <TableCell>{specificEmp.start_date}</TableCell>
+                    </TableRow>   
+
+                    <TableRow>
+                      <TableCell variant="head">Latest Start Date:</TableCell>
+                      <TableCell>{specificEmp.latest_start_date}</TableCell>
+                    </TableRow>   
+
+                    <TableRow>
+                      <TableCell variant="head">Latest End Date:</TableCell>
+                      <TableCell>{specificEmp.latest_end_date}</TableCell>
+                    </TableRow>   
+
+                    <TableRow>
+                      <TableCell variant="head">Contractor Status:</TableCell>
+                      <TableCell>{specificEmp.contractor_status}</TableCell>
+                    </TableRow>   
+
+                  </React.Fragment>
+                ))}
+                </TableBody>
+
+              </Table>
+            </TableContainer>
+          </Paper>
+
+          <div className={styles.alignButtonRight}><ButtonSubmit buttonText="EDIT"/> </div>
+          
+
           </div>
 
       </div>

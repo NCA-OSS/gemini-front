@@ -8,6 +8,8 @@ import {EmployeeTable,BasicTable} from '../../component/shared/dashboard/dashboa
 
 import EmployeeProfile from '../../component/shared/employeeProfile/employeeProfile';
 
+import {ButtonSubmit} from '../../component/shared/button';
+
 //Style
 import styles from '../../pages/index.module.scss'
 
@@ -33,15 +35,16 @@ const specific = [
 
 export default function EmployeeDetailPage() {
     return (
+      <div className={styles.background}>
       <div className={styles.row}>
         <div className={styles.leftCol}>
           <Navbar />
         </div>
 
         <div className={styles.rightCol}>
-          <EmployeeProfile/>
+          <EmployeeProfile/>  
         </div>
-        
+      </div>
       </div>
     )
   };

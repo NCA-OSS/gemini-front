@@ -365,7 +365,7 @@ export function EmployeeTable() {
                         <TableBody>
                             {rows?.map((row) => (
                                         <TableRow
-                                        href="/addAccount"
+                                        href="/"
                                         className={styles.hoverMouse}
                                         onClick={()=>handleRowClick(row)}
                                         key={row.name}

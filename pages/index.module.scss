@@ -5,7 +5,8 @@ $background-color:#363740;
 .loginBackground{
     background-color:$background-color ;
     margin: 0px;
-    padding: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .row:after {
@@ -24,7 +25,6 @@ $background-color:#363740;
     float: left;
     width: 75%;
     padding-right: 5%;
-    padding-top: 5%;
     padding-bottom: 5%;
 }
 
@@ -37,3 +37,8 @@ $background-color:#363740;
     justify-content: center;
     align-items: center;
 }
+
+.background{
+    background-color: #F7F8FC;
+}
+
