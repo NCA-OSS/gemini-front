@@ -145,13 +145,13 @@ const makeStyles=(priority)=>{
     else if(priority === 'Normal')
     {
         return{
-            background : '#29CC97',
+            background : '#FEC400',
         }
     }
     else if (priority === 'Low')
     {
         return {
-            background : '#FEC400',
+            background : '#29CC97',
         }
     }
 }
