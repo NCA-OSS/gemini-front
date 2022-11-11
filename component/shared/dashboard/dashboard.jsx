@@ -66,12 +66,12 @@ const dashboard_data = [
         tribe: "DICE",
         squad: "Biz Portal",
         empl_number: "5",
-        priority: "Normal",
+        priority: "Normal", // avg(sum(priority)/number of employee) (3months =< high(3), 6months =< normal(2), else = low(1))
         emp_data:[
             {
                 name: "Tan Hong Shen",
                 email: "hong.shen.tan@accenture.com",
-                end_contract: "30-11-2022",
+                end_contract: "30-11-2022", //end - current date  (3months =< high(3), 6months =< normal(2), else = low(1))
                 priority: "High"
             },{
                 name: "Tan Hong Shen",
@@ -195,7 +195,7 @@ function Row(props) {
                                                 <TableCell className={styles.miniCell} align="center">{emp_data.name}</TableCell>
                                                 <TableCell className={styles.miniCell} align="center">{emp_data.email}</TableCell>
                                                 <TableCell className={styles.miniCell} align="center">{emp_data.end_contract}</TableCell>
-                                                <TableCell className={styles.miniCell} align="center"><span className={styles.priority} style={makeStyles(row.priority)}>{emp_data.priority}</span></TableCell>
+                                                <TableCell className={styles.miniCell} align="center"><span className={styles.priority} style={makeStyles(emp_data.priority)}>{emp_data.priority}</span></TableCell>
                                             </TableRow>
                                         ))}
                                 </TableBody>
