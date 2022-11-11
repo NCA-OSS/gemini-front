@@ -10,10 +10,15 @@ import styles from './dashboard.module.scss';
 import {IconButton} from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
+
+
 import Collapse from "@mui/material/Collapse";
 import Box from "@mui/material/Box";
 import PropTypes from "prop-types";
 import Typography from "@mui/material/Typography";
+
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
 const dashboard_data = [
     {
@@ -157,6 +162,7 @@ const makeStyles=(priority)=>{
 }
 
 
+
 function Row(props) {
     const { row } = props;
     const [open, setOpen] = React.useState(false);
@@ -172,7 +178,9 @@ function Row(props) {
                     <TableCell align="center">{row.squad}</TableCell>
                     <TableCell align="center">{row.empl_number}</TableCell>
                     <TableCell align="center">
-                        <span className={styles.priority} style={makeStyles(row.priority)}>{row.priority}</span>
+                        <span className={styles.priority} style={makeStyles(row.priority)}>
+                            {row.priority}
+                        </span>
                     </TableCell>
                     <TableCell>
                         <IconButton
@@ -190,7 +198,7 @@ function Row(props) {
                         <Box>
                             <Table aria-label="employee_info">
                                 <TableBody>
-                                        {row.emp_data.map((emp_data) => (
+                                        {row.emp_data?.map((emp_data) => (
                                             <TableRow key={emp_data.name}>
                                                 <TableCell className={styles.miniCell} align="center">{emp_data.name}</TableCell>
                                                 <TableCell className={styles.miniCell} align="center">{emp_data.email}</TableCell>
@@ -223,8 +231,10 @@ Row.propTypes = {
         ).isRequired,
     }).isRequired,
 };
-export default function BasicTable() {
 
+
+
+export function BasicTable() {
     return (
             <Paper sx={{overflowX:'auto', minWidth:900}}>
                 <TableContainer sx= {{maxHeight:370}} component={Paper}
@@ -254,6 +264,132 @@ export default function BasicTable() {
                                 <Row key={row.name} row={row}/>
                                 ))}
                         </TableBody>
+                    </Table>
+                </TableContainer>
+            </Paper>
+
+    );
+}
+
+
+
+const employee_data = [
+    {
+        name: "Tan Hong Shen 1",
+        email: "hong.shen.tan@accenture.com",
+        end_contract: "30-11-2022",
+        priority: "Low"
+    },{
+        name: "Tan Hong Shen 2",
+        email: "hong.shen.tan@accenture.com",
+        end_contract: "30-11-2022",
+        priority: "Normal"
+    },{
+        name: "Tan Hong Shen 3",
+        email: "hong.shen.tan@accenture.com",
+        end_contract: "30-11-2022",
+        priority: "High"
+    },
+    {
+        name: "Gerald Lee Ming Han 1",
+        email: "gerald.ming.han.lee@accenture.com",
+        end_contract: "30-11-2022",
+        priority: "Normal"
+    },{
+        name: "Gerald Lee Ming Han 2",
+        email: "gerald.ming.han.lee@accenture.com",
+        end_contract: "30-11-2022",
+        priority: "Normal"
+    },{
+        name: "Gerald Lee Ming Han 3",
+        email: "gerald.ming.han.lee@accenture.com",
+        end_contract: "-",
+        priority: "Normal"
+    }
+]
+
+
+//Imports for EmployeeTable
+import SearchBar from "material-ui-search-bar";
+
+export function EmployeeTable() {
+    const [selectedRow, setSelectedRow] = React.useState();
+    // console.log({ selectedRow });
+
+    const [rows, setRows] = React.useState(employee_data);
+    const [searched, setSearched] = React.useState("");
+
+    const requestSearch = (searchedVal) => {
+        const filteredRows = employee_data.filter((row) => {
+          return row.name.toLowerCase().includes(searchedVal.toLowerCase());
+        });
+        setRows(filteredRows);
+      };
+
+    const cancelSearch = () => {
+        setSearched("");
+        requestSearch(searched);
+      };
+
+    
+    function handleRowClick(row) {
+        //Should route user to employee/{id} where id is the specific user's id
+        
+        setSelectedRow(row);
+        console.log("User clicked row on",row.name);
+      }
+
+
+    return (
+            <Paper sx={{overflowX:'auto'}}>
+                <SearchBar 
+                value={searched}
+                onChange={(searchVal)=>requestSearch(searchVal)}
+                onCancelSearch={()=>cancelSearch()}
+                placeholder="Search for an employee or contractor (eg. Gerald)"
+                 />
+
+                <TableContainer sx= {{maxHeight:250}} component={Paper}
+                                style = { {boxShadow: '0px 13px 20px 0px #80808029'}}>
+                    <Table stickyHeader>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell align='center'>Name</TableCell>
+                                <TableCell align="center">Email</TableCell>
+                                <TableCell align="center">End Date of Contract</TableCell>
+                                <TableCell align="center">Priority</TableCell>
+                                <TableCell/>
+                            </TableRow>
+                        </TableHead>
+
+                        <TableBody>
+                            {rows?.map((row) => (
+                                        <TableRow
+                                        href="/addAccount"
+                                        className={styles.hoverMouse}
+                                        onClick={()=>handleRowClick(row)}
+                                        key={row.name}
+                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                        <TableCell align="center">{row.name}</TableCell>
+                                        <TableCell align="center">{row.email}</TableCell>
+                                        <TableCell align="center">{row.end_contract}</TableCell>
+                                        <TableCell align="center">
+                                            <span className={styles.priority} style={makeStyles(row.priority)}>
+                                                {row.priority}
+                                            </span>
+                                        </TableCell>
+                                        <TableCell>
+                                            <IconButton
+                                                aria-label="more details"
+                                                size="small"
+                                            ><ArrowCircleRightOutlinedIcon/>
+                                            </IconButton>
+                                        </TableCell>
+                                        </TableRow>
+                                    ))}
+
+                        </TableBody>
+
                     </Table>
                 </TableContainer>
             </Paper>

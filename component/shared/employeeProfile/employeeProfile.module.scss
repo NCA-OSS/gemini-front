@@ -1,0 +1,27 @@
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    position: relative;
+  }
+
+.leftCol{
+    float: left;
+    width: 50%;
+}
+
+.rightCol{
+    float: left;
+    width: 50%;
+}
+
+
+// .background{
+//     width: 500px;
+//     height: 500px;
+//     background-color:#999999;
+//     border-radius: 8px;
+//     top:50%;
+//     left: 50%;
+//     margin: auto;
+// }
