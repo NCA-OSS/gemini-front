@@ -1,5 +1,5 @@
 .navheader{
-  position:sticky;
+  position:fixed;
   top:0;
   z-index: 10;
 }
@@ -30,7 +30,7 @@
   align-items: center;
 }
 .nav_card_btm{
-  position: absolute;
+  position: fixed;
   bottom: 0px;
 }
 .nav_card:hover{

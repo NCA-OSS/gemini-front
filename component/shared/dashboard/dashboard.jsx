@@ -13,6 +13,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Collapse from "@mui/material/Collapse";
 import Box from "@mui/material/Box";
 import PropTypes from "prop-types";
+import Typography from "@mui/material/Typography";
 
 const dashboard_data = [
     {
@@ -223,11 +224,22 @@ Row.propTypes = {
     }).isRequired,
 };
 export default function BasicTable() {
+
     return (
-            <Paper sx={{overflowX:'auto'}}>
-                <TableContainer sx= {{maxHeight:250}} component={Paper}
+            <Paper sx={{overflowX:'auto', minWidth:900}}>
+                <TableContainer sx= {{maxHeight:370}} component={Paper}
                                 style = { {boxShadow: '0px 13px 20px 0px #80808029'}}>
+                    <Typography
+                        sx={{ paddingLeft: 3, paddingTop: 1 }}
+                        variant="h6"
+                        id="tableTitle"
+                        component="div"
+                        align = "left"
+                    >
+                        Contractor
+                    </Typography>
                     <Table stickyHeader>
+
                         <TableHead>
                             <TableRow>
                                 <TableCell align='center'>Tribes</TableCell>
