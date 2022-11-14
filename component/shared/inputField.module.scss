@@ -10,8 +10,9 @@
     font-family: 'Mulish', sans-serif;;
 }
 
+//original 316px, 42px, 14px
 .inputField_login{
-    @include inputField(316px,42px,14px)
+    @include inputField(243px,32px,10px)
 }
 
 .inputField_standard{
@@ -28,7 +29,7 @@
 
 .invalidPasswordText{
     color:red;
-    font-size: 14px;
+    font-size: 10px;
     padding-top: 4%;
     font-family: 'Mulish', sans-serif;;
 }

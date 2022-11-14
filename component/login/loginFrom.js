@@ -20,8 +20,9 @@ export default function LoginForm() {
     return (
         
             <div className={styles.loginRectangle}>
-                <Image src="/assets/images/RMS.png" alt="logo" width={500} height={100}/>
-
+                <div className={styles.logoPadding}>
+                    <Image src="/assets/images/RMS.png" alt="logo" width={500} height={100} />
+                </div>
                 <div> <LoginTitle titleText="Log In to Resource Management System"/></div>
                 
                 <div>
@@ -49,7 +50,6 @@ export default function LoginForm() {
                 </div>
 
                 <div className={styles.loginButton}><ButtonLogin titleName="Login"/> </div>
-
 
                 <div className={styles.noAccount}>Don't have an account ?</div>
                 <div className={styles.downloadInstructions} >

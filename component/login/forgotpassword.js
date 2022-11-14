@@ -21,27 +21,28 @@ export default function ForgotPassword(){
 
     return (
         <div className={styles.loginRectangle}>
-        <Image src="/assets/images/RMS.png" alt="logo" width={500} height={100}/>
+            <div className={styles.logoPadding}>
+                <Image src="/assets/images/RMS.png" alt="logo" width={500} height={100}/>
+            </div>
+            <div> <LoginTitle titleText="Forgot Password"/></div>
 
-        <div> <LoginTitle titleText="Forgot Password"/></div>
 
+            <div className={styles.emailTitle}><h3>EMAIL</h3></div>
 
-        <div className={styles.emailTitle}><h3>EMAIL</h3></div>
+            <div className={styles.inputEmail}>
+                <InputFieldLogin setData={setData} />
+            </div>
 
-        <div className={styles.inputEmail}>
-            <InputFieldLogin setData={setData} />
+            <div className={styles.loginButton}>
+                <ButtonSendEmail data={data}/> 
+            </div>
+
+            <div className={styles.noAccount}>Don't have an account ?</div>
+            <div className={styles.downloadInstructions} >
+                <a href="/LoginInstructions.pdf" download="Instructions">Download Instructions
+                </a>
+            </div>
+
         </div>
-
-        <div className={styles.loginButton}>
-            <ButtonSendEmail data={data}/> 
-        </div>
-
-        <div className={styles.noAccount}>Don't have an account ?</div>
-        <div className={styles.downloadInstructions} >
-            <a href="/LoginInstructions.pdf" download="Instructions">Download Instructions
-            </a>
-        </div>
-
-    </div>
     );
 }

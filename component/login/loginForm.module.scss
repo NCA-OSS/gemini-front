@@ -8,45 +8,50 @@ $font-family: 'Mulish', sans-serif;
     padding-top: 30px;
 }
 
+// width 380, height 746 divided by 1.5
 .loginRectangle{
-    width: 380px;
-    height: 746px;
+    width: 290px;
+    height: 497px;
     background-color:#ffffff;
     position:relative;
-    bottom:0px;
-    right:0px;
     margin: 0 auto;
     border-radius: 8px;
-    padding-top: 5%;
     padding-right: 5%;
+}
+
+.logoPadding{
+    padding-left: 20%;
+    padding-top: 10%;
 }
 
 
 .inputEmail{
     padding-top: 0px;
-    padding-left: 50px;
+    padding-left: 25px;
     position: static;
 }
 
 .inputPassword{
     padding-top: 0px;
-    padding-left: 50px;
+    padding-left: 25px;
     position: static;
 }
 
 .columnLeft {
     float: left;
-    width: 68%;
+    width: 10%;
 }
 
 .columnRight {
     float: right;
-    width: 32%;
+    width: 90%;
+    text-align:end;
 }
 
 .forgotPassRightAlign{
     float:10px;
-    padding-top: 33px;
+    padding-top: 28px;
+    font-size: 10px;
 }
 
 
@@ -61,32 +66,31 @@ $font-family: 'Mulish', sans-serif;
 
 .loginButton{
     padding-top: 50px;
-    padding-left: 50px;
-    position: static;
+    padding-left: 25px;
 }
 
 
 .emailTitle{
     padding-top: 20px;
-    padding-left: 50px;
-    font-size: 12px;
+    padding-left: 25px;
+    font-size: 8px;
     font-family: $font-family;
     color:#999999;
 }
 
 
 .noAccount{
-    margin-top: 70px;
-    padding-left: 50px;
-    font-size: 14px;
+    margin-top: 15%;
+    padding-left: 25%;
+    font-size: 10px;
     color: #999999;
     font-family: $font-family;
     text-align: center;
 }
 
 .downloadInstructions{
-    padding-left: 50px;
-    font-size: 14px;
+    padding-left: 25%;
+    font-size: 10px;
     color: #3751FF;
     font-family: $font-family;
     font-weight: bold;
@@ -126,9 +130,10 @@ $font-family: 'Mulish', sans-serif;
 }
 
 
+//w:1023px h:872px, /1.5
 .checkEmailPopUpRectangle{
-    width: 1023px;
-    height: 872px;
+    width: 500px;
+    height: 500px;
     background-color:#ffffff;
     border-radius: 8px;
     position:absolute;
@@ -139,7 +144,7 @@ $font-family: 'Mulish', sans-serif;
 
 .checkEmailFont{
     text-align: center;
-    font-size: 40px;
+    font-size: 24px;
     font-family: $font-family;
     color:#000000;
     font-weight: bold;
@@ -147,7 +152,7 @@ $font-family: 'Mulish', sans-serif;
 
 .checkEmailFontDesc{
     text-align: center;
-    font-size: 25px;
+    font-size: 16px;
     font-family: $font-family;
     color:#000000;
     padding: 50px;
@@ -155,7 +160,7 @@ $font-family: 'Mulish', sans-serif;
 
 .closeTab{
     text-align: center;
-    font-size: 25px;
+    font-size: 16px;
     font-family: $font-family;
     color:#999999;
     padding: 50px;
@@ -163,7 +168,7 @@ $font-family: 'Mulish', sans-serif;
 
 
 .outlookPadding{
-    padding-top: 127px;
+    padding-top: 10%;
 }
 
 
@@ -173,17 +178,14 @@ $font-family: 'Mulish', sans-serif;
 
 
 .resetPasswordRectangle{
-    width: 380px;
-    height: 746px;
+    width: 290px;
+    height: 479px;
     background-color:#ffffff;
+    border-radius: 8px;
     position:absolute;
     bottom:0px;
     right:0px;
-    margin: 0 auto;
-    border-radius: 8px;
-    padding-top: 50px;
-    padding-right: 50px;
-    justify-content: center;
+    padding-right: 22%;
 }
 
 
@@ -194,7 +196,7 @@ $font-family: 'Mulish', sans-serif;
 
 .resetSuccessCloseTab{
     text-align: center;
-    font-size: 19px;
+    font-size: 14px;
     font-family: $font-family;
     color:#999999;
     font-weight: lighter;

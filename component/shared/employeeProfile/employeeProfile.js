@@ -3,6 +3,9 @@
 //React 
 import React, { useState } from 'react';
 
+//Components
+import EmpStatusItem from "./empStatusItem";
+
 //Package
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -24,7 +27,7 @@ import styles from './employeeProfile.module.scss';
 
 const specificEmp = [
   {
-      current_status:"ACTIVE",
+      empStatus:"Active",
       name: "Tan Hong Shen 1",
       email: "hong.shen.tan@accenture.com",
       end_contract: "30-11-2022",
@@ -48,24 +51,6 @@ const specificEmp = [
   }
 ]
 
-const makeStyles=(priority)=>{
-
-  if(priority === 'RESIGNED')
-  {
-      return  {
-          background: '#F12B2C',
-      }
-  }
-  else if (priority === 'ACTIVE')
-  {
-      return {
-          background : '#29CC97',
-      }
-  }
-}
-
-
-
 
 
 export default function EmployeeProfile(props) {
@@ -82,7 +67,23 @@ export default function EmployeeProfile(props) {
       <div className={styles.row}>
         {/* Add employee current_status card here */}
         <div className={styles.leftCol}>
-          <h3>Personal Details</h3>
+
+          <div className={styles.row}>
+              <div className={styles.leftCol}>
+                <h3>Personal Details</h3>
+              </div>
+
+              <div className={styles.rightCol}>
+                <div className={styles.statusPadding}>
+                  {specificEmp.map((emp, index) => {
+                      return (
+                          <EmpStatusItem {...emp}/>
+                      )
+                  })}
+                </div>
+              </div>
+
+        </div>
           <Paper>
             <TableContainer>
               <Table sx={{[`& .${tableCellClasses.root}`]: {borderBottom: "none"}}}
@@ -98,10 +99,10 @@ export default function EmployeeProfile(props) {
 
                     <TableRow>
                       <TableCell variant="head">Full Name:</TableCell>
-                      {/* <TableCell>{specificEmp.full_name}</TableCell> */}
-                      <TableCell>
+                      <TableCell>{specificEmp.full_name}</TableCell>
+                      {/* <TableCell>
                         <TextField value={userInput} onChange={handleChange} size="small"/>
-                      </TableCell>
+                      </TableCell> */}
                     </TableRow>
 
                     <TableRow>
@@ -200,7 +201,7 @@ export default function EmployeeProfile(props) {
                     </TableRow>
 
                     <TableRow>
-                      <TableCell variant="head">Company:</TableCell>
+                      <TableCell variant="head">Country:</TableCell>
                       <TableCell>{specificEmp.country}</TableCell>
                     </TableRow>   
 

@@ -40,6 +40,7 @@ export function InputFieldLogin({setData}) {
       <Box component="form">
         <TextField type="email" className={styles.inputField_login} 
         value={userInput}
+        size="small"
         onChange={handleChange}/>
         {error && <h2 className={styles.invalidPasswordText}>{error}</h2>}
       </Box>
@@ -83,16 +84,18 @@ export function InputFieldLogin({setData}) {
     return(
       <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
       <div className={styles.inputField_login}>
-        <FormControl sx={{width: '38ch' }} variant="outlined">
+        <FormControl sx={{width: '41ch' }} variant="outlined">
           {/* <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel> */}
           <OutlinedInput
             id="outlined-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
+            size="small"
             onChange={handleChange('password')}
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
+                  size="small"
                   aria-label="toggle password visibility"
                   onClick={handleClickShowPassword}
                   onMouseDown={handleMouseDownPassword}
