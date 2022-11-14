@@ -13,6 +13,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Collapse from "@mui/material/Collapse";
 import Box from "@mui/material/Box";
 import PropTypes from "prop-types";
+import Typography from "@mui/material/Typography";
 
 const dashboard_data = [
     {
@@ -65,12 +66,12 @@ const dashboard_data = [
         tribe: "DICE",
         squad: "Biz Portal",
         empl_number: "5",
-        priority: "Normal",
+        priority: "Normal", // avg(sum(priority)/number of employee) (3months =< high(3), 6months =< normal(2), else = low(1))
         emp_data:[
             {
                 name: "Tan Hong Shen",
                 email: "hong.shen.tan@accenture.com",
-                end_contract: "30-11-2022",
+                end_contract: "30-11-2022", //end - current date  (3months =< high(3), 6months =< normal(2), else = low(1))
                 priority: "High"
             },{
                 name: "Tan Hong Shen",
@@ -144,13 +145,13 @@ const makeStyles=(priority)=>{
     else if(priority === 'Normal')
     {
         return{
-            background : '#29CC97',
+            background : '#FEC400',
         }
     }
     else if (priority === 'Low')
     {
         return {
-            background : '#FEC400',
+            background : '#29CC97',
         }
     }
 }
@@ -194,7 +195,7 @@ function Row(props) {
                                                 <TableCell className={styles.miniCell} align="center">{emp_data.name}</TableCell>
                                                 <TableCell className={styles.miniCell} align="center">{emp_data.email}</TableCell>
                                                 <TableCell className={styles.miniCell} align="center">{emp_data.end_contract}</TableCell>
-                                                <TableCell className={styles.miniCell} align="center"><span className={styles.priority} style={makeStyles(row.priority)}>{emp_data.priority}</span></TableCell>
+                                                <TableCell className={styles.miniCell} align="center"><span className={styles.priority} style={makeStyles(emp_data.priority)}>{emp_data.priority}</span></TableCell>
                                             </TableRow>
                                         ))}
                                 </TableBody>
@@ -223,11 +224,22 @@ Row.propTypes = {
     }).isRequired,
 };
 export default function BasicTable() {
+
     return (
-            <Paper sx={{overflowX:'auto'}}>
-                <TableContainer sx= {{maxHeight:250}} component={Paper}
+            <Paper sx={{overflowX:'auto', minWidth:900}}>
+                <TableContainer sx= {{maxHeight:370}} component={Paper}
                                 style = { {boxShadow: '0px 13px 20px 0px #80808029'}}>
+                    <Typography
+                        sx={{ paddingLeft: 3, paddingTop: 1 }}
+                        variant="h6"
+                        id="tableTitle"
+                        component="div"
+                        align = "left"
+                    >
+                        Contractor
+                    </Typography>
                     <Table stickyHeader>
+
                         <TableHead>
                             <TableRow>
                                 <TableCell align='center'>Tribes</TableCell>
