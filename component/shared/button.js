@@ -65,9 +65,9 @@ export function ButtonLogin(props) {
 
 
 
-  export function ButtonSubmit(){
+  export function ButtonSubmit(props){
     return(
-        <button type="submit" className={styles.button_submit}>SUBMIT</button>
+        <button type="submit" className={styles.button_submit}>{props.buttonText}</button>
     );
   }
 

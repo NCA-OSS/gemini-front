@@ -14,8 +14,9 @@ $buttonColor:#4285F4;
 
 }
 
+//316px, 48px,14px
 .button_login{
-    @include button(316px,48px,14px)
+    @include button(248px,37px,10px)
 }
 
 .button_login:disabled{
@@ -23,7 +24,8 @@ $buttonColor:#4285F4;
     cursor: default;
 }
 
+//120px,50px,10px
 .button_submit{
-    @include button(220px,67px,22px)
+    @include button(92px,38px,10px)
 }
 

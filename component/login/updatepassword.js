@@ -18,8 +18,9 @@ export default function UpdatePassword(){
 
     return (
         <div className={styles.loginRectangle}>
-        <Image src="/assets/images/RMS.png" alt="logo" width={500} height={100}/>
-
+        <div className={styles.logoPadding}>
+            <Image src="/assets/images/RMS.png" alt="logo" width={500} height={100}/>
+        </div>
         <div> <LoginTitle titleText="Forgot Password"/></div>
 
         <div className={styles.emailTitle}><h3>NEW PASSWORD</h3></div>

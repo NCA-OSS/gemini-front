@@ -6,7 +6,6 @@ import LoginForm from '../component/login/loginFrom'
 import Navbar from '../component/shared/navbar/navBar';
 import Table from '../component/shared/dashboard/dashboard';
 import Piechart from "../component/shared/piechart/piechart";
-import Empstatus from "../component/shared/empStatus/empStatus";
 
 
 //Style
@@ -18,7 +17,7 @@ export default function Home() {
   return (
 
       <div>
-
+        <LoginForm/>
       </div>
 
 

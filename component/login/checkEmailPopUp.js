@@ -12,7 +12,7 @@ export default function CheckEmailPopUp() {
   return (
     <div className={styles.checkEmailPopUpRectangle}>
         <div className={styles.outlookPadding}>
-        <Image src="/assets/SVGFiles/Icons/OutlookMail.svg" alt="Outlook email icon" width={235} height={235}/>
+        <Image src="/assets/SVGFiles/Icons/OutlookMail.svg" alt="Outlook email icon" width={100} height={100}/>
         </div>
         <div>
             <h1 className={styles.checkEmailFont}>
@@ -20,7 +20,7 @@ export default function CheckEmailPopUp() {
             </h1>
 
             <h1 className={styles.checkEmailFontDesc}>
-                You’ve entered [email] as the email to reset password. Check your email and click on the link provided to reset your password.
+                If your email is present in the database, we have sent an email. Check your email and click on the link provided to reset your password.
             </h1>
 
             <h1 className={styles.closeTab}>
