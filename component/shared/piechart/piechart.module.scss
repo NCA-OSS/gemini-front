@@ -1,0 +1,27 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+  min-height: 200px;
+  align-items: center;
+}
+.pie_container{
+  border: 2px solid red;
+
+}
+.card_container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 350px;
+  height: 150px;
+  padding: 0;
+}
+
+.card{
+  font-family: 'Mulish', sans-serif;
+  padding: 19px;
+  text-align: center;
+  height: 60px;
+  border-radius: 12px;
+}

@@ -1,0 +1,66 @@
+$background-color:#363740;
+
+
+
+.loginBackground{
+
+  background-color:$background-color ;
+
+
+}
+
+
+
+.row:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+  position: relative;
+
+}
+
+
+
+.leftCol{
+
+  float: left;
+
+  width: 25%;
+
+}
+
+
+
+.rightCol{
+
+  float: left;
+
+  width: 75%;
+
+  padding-left: 25vw;
+
+}
+
+
+
+.centerText{
+
+  text-align: center;
+
+}
+
+
+
+.centerComponent{
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
