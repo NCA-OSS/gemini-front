@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 //Component
 import LoginForm from '../component/login/loginFrom'
-import Navbar from '../component/shared/navbar/navBar';
+import Navbar from '../component/shared/navbar/navbar';
 import Table from '../component/shared/dashboard/dashboard';
 import Piechart from "../component/shared/piechart/piechart";
 
@@ -16,9 +16,9 @@ export default function Home() {
 
   return (
 
-      <div className={styles.loginBackground}>
-        <LoginForm/>
-      </div>
+    <div className={styles.loginBackground}>
+      <LoginForm />
+    </div>
 
 
   )
