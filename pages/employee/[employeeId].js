@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 
 //Component
-import Navbar from '../../component/shared/navbar/navBar';
+import Navbar from '../../component/shared/navbar/navbar';
 import { EmployeeTable, BasicTable } from '../../component/shared/dashboard/dashboard';
 
 import EmployeeProfile from '../../component/shared/employeeProfile/employeeProfile';
