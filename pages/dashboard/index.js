@@ -7,11 +7,12 @@ import {BasicTable} from '../../component/shared/dashboard/dashboard';
 import Piechart from "../../component/shared/piechart/piechart";
 
 //Style
-import styles from '../index.module.scss'
+import styles from './index.module.scss'
 
 
 export default function Home() {
     return (
+        <div className={styles.background}>
         <div className={styles.row}>
 
             <div className={styles.leftCol}>
@@ -22,6 +23,7 @@ export default function Home() {
                 <div className={styles.centerText}><Piechart/></div>
                 <div className={styles.centerText}><BasicTable/></div>
             </div>
+        </div>
         </div>
     )
 

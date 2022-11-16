@@ -1,0 +1,39 @@
+$background-color:#363740;
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    position: relative;
+  }
+
+.leftCol{
+    float: left;
+    width: 25%;
+}
+
+.rightCol{
+    float: right;
+    width: 75%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.centerComponent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background{
+    background-color: #F7F8FC;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+}
+
