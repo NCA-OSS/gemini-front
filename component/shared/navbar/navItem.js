@@ -2,12 +2,12 @@ import Link from 'next/link'
 import React from 'react'
 import styles from './navbar.module.scss';
 
-const NavItem = ({logo, href, text, active}) => {
+const NavItem = ({ logo, href, text, active }) => {
     return (
         <Link href={href}>
 
-                <a className={styles.nav_link}>
-                    <div className={styles.nav_items}>
+            <a className={styles.nav_link}>
+                <div className={styles.nav_items}>
 
                     <div className={styles.nav_icon} >
                         {logo}
@@ -17,7 +17,7 @@ const NavItem = ({logo, href, text, active}) => {
                         {text}
                     </div>
                 </div>
-                </a>
+            </a>
 
 
         </Link>
