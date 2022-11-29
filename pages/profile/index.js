@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 //Component
 import Navbar from '../../component/shared/navbar/navbar';
-import { BasicTable } from '../../component/shared/dashboard/dashboard';
+import { SummaryTable } from '../../component/dashboard';
 
 //Style
 import styles from '../../pages/index.module.scss'
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className={styles.loginBackground}>
       <Navbar />
-      <BasicTable />
+      <SummaryTable />
       <h1>This is profile page.</h1>
     </div>
   )

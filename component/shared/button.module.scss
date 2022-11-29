@@ -1,31 +1,31 @@
-$buttonColor:#4285F4;
+$buttonColor: #4285F4;
 
-@mixin button($width,$height,$font-size) {
+@mixin button($width, $height) {
     width: $width;
     height: $height;
-    font-size: $font-size;
     background-color: $buttonColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
     border-radius: 8px;
     outline: none;
     border: none;
-    color:#ffffff;
+    color: #ffffff;
     cursor: pointer;
-
-
 }
 
 //316px, 48px,14px
-.button_login{
-    @include button(248px,37px,10px)
+.button_login {
+    @include button(100%, 37px)
 }
 
-.button_login:disabled{
-    background-color:#999999;
+.button_login:disabled {
+    background-color: #999999;
     cursor: default;
 }
 
 //120px,50px,10px
-.button_submit{
-    @include button(92px,38px,10px)
+.button_submit {
+    @include button(92px, 38px)
 }
-

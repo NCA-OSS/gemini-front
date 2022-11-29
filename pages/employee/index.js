@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 //Component
 import Navbar from '../../component/shared/navbar/navbar';
-import { EmployeeTable, BasicTable } from '../../component/shared/dashboard/dashboard';
+import { EmployeeTable, SummaryTable } from '../../component/dashboard';
 
 
 
@@ -17,11 +17,11 @@ export default function Home() {
     <div className={styles.background}>
       <div className={styles.row}>
 
-        <div className={styles.leftCol}>
+        <div className={styles.navbar}>
           <Navbar />
         </div>
 
-        <div className={styles.rightCol}>
+        <div className={styles.main}>
           <h2 className={styles.centerText}>Search for Employee</h2>
           <div className={styles.centerComponent}><EmployeeTable /></div>
         </div>

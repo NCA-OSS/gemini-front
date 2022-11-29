@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 
 //Component
 import Navbar from '../../component/shared/navbar/navbar';
-import { EmployeeTable, BasicTable } from '../../component/shared/dashboard/dashboard';
+import { EmployeeTable, SummaryTable } from '../../component/dashboard';
 
-import EmployeeProfile from '../../component/shared/employeeProfile/employeeProfile';
+import EmployeeProfile from '../../component/employeeProfile/employeeProfile';
 
 import { ButtonSubmit } from '../../component/shared/button';
 
@@ -17,13 +17,15 @@ export default function EmployeeDetailPage() {
   return (
     <div className={styles.background}>
       <div className={styles.row}>
-        <div className={styles.leftCol}>
+        <div className={styles.navbar}>
           <Navbar />
         </div>
 
-        <div className={styles.rightCol}>
-          <EmployeeProfile />
+        <div className={styles.main}>
+          <h2 className={styles.centerText}>Employee Details</h2>
+          <div className={styles.centerComponent}><EmployeeProfile /></div>
         </div>
+
       </div>
     </div>
   )
