@@ -97,3 +97,11 @@ tr.ndtr {
 th {
   font-weight: bold !important;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
