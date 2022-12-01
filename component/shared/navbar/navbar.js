@@ -26,7 +26,7 @@ const MENU_LIST = [
     }, {
         logo: <UserPlus size={23} />,
         text: "Add Account",
-        href: "/addAccount"
+        href: "/addEmployee"
     }
 ]
 
