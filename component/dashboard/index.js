@@ -18,6 +18,7 @@ import Typography from "@mui/material/Typography";
 
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
+
 const dashboard_data = [
     {
         tribe: "DICE",
