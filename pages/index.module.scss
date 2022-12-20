@@ -1,44 +1,34 @@
-$background-color:#363740;
-
-
-
-.loginBackground{
-    background-color:$background-color ;
-    margin: 0px;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-}
+$background-color: #363740;
 
 .row:after {
     content: "";
     display: table;
     clear: both;
     position: relative;
-  }
+}
 
-.leftCol{
+.leftCol {
     float: left;
     width: 25%;
 }
 
-.rightCol{
+.rightCol {
     float: left;
     width: 75%;
     padding-right: 5%;
     padding-bottom: 5%;
 }
 
-.centerText{
+.centerText {
     text-align: center;
 }
 
-.centerComponent{
+.centerComponent {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.background{
+.background {
     background-color: #F7F8FC;
 }
-

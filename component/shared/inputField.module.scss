@@ -1,35 +1,64 @@
+// @mixin inputField($width, $height, $font-size) {
+//     width: $width;
+//     height: $height;
+//     font-size: $font-size;
+//     border-radius: 8px;
+//     outline: none;
+//     border: none;
+//     color: #ffffff;
+//     font-family: 'Mulish', sans-serif;
+//     ;
+// }
 
-@mixin inputField($width,$height,$font-size) {
-    width: $width;
-    height: $height;
-    font-size: $font-size;
-    border-radius: 8px;
-    outline: none;
-    border: none;
-    color:#ffffff;
-    font-family: 'Mulish', sans-serif;;
-}
+// //original 316px, 42px, 14px
+// .inputField_login {
+//     @include inputField(243px, 32px, 10px)
+// }
 
-//original 316px, 42px, 14px
-.inputField_login{
-    @include inputField(243px,32px,10px)
-}
-
-.inputField_standard{
-    @include inputField(229px,24.8px,20px)
-}
+// .inputField_standard {
+//     @include inputField(229px, 24.8px, 20px)
+// }
 
 
-.showPasswordButton{
-    border: none;
-    background-color: #e7e7e7; 
+// .showPasswordButton {
+//     border: none;
+//     background-color: #e7e7e7;
+//     color: black;
+// }
+
+
+// .invalidPasswordText {
+//     color: red;
+//     font-size: 10px;
+//     padding-top: 4%;
+//     font-family: 'Mulish', sans-serif;
+//     ;
+// }
+
+.input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
     color: black;
 }
 
+.passwordContainer {
+    position: relative;
+}
 
-.invalidPasswordText{
-    color:red;
+.passwordEye {
+    position: absolute;
+    top: 23%;
+    right: 4%;
+    cursor: pointer;
+    color: lightgray;
+}
+
+.errorMsg {
     font-size: 10px;
-    padding-top: 4%;
-    font-family: 'Mulish', sans-serif;;
+    color: red;
 }

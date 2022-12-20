@@ -1,8 +1,5 @@
-$background-color:#363740;
+$background-color: #363740;
 
-.loginBackground{
-  background-color:$background-color ;
-}
 
 .row:after {
   content: "";
@@ -11,31 +8,38 @@ $background-color:#363740;
   position: relative;
 }
 
-
-.leftCol{
+.leftCol {
   float: left;
   width: 25%;
 }
 
-
-.rightCol{
-  float: left;
-  width: 75%;
-  padding-left: 25vw;
+.rightCol {
+  float: right;
+  width: 100%;
+  // padding-right: 5%;
+  // padding-bottom: 5%;
 }
 
-
-.centerText{
+.centerText {
   text-align: center;
 }
 
-
-.centerComponent{
+.centerComponent {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.background{
+.background {
   background-color: #F7F8FC;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 40px;
+}
+
+
+.main {
+  margin-left: 230px;
+  padding: 0px 10px;
 }

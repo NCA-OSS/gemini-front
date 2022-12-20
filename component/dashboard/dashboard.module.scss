@@ -1,0 +1,26 @@
+.priority {
+    color: WHITE;
+    padding: 4px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px !important;
+}
+
+.miniCell {
+    border-bottom: 1px solid lightgray;
+}
+
+.miniCell:last-of-type {
+    border-bottom: none;
+}
+
+.miniCell:last-of-type {
+    border-bottom: none;
+}
+
+.hoverMouse {
+    cursor: pointer;
+}
