@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { CommonMultipleSelectField } from './MultipleSelect';
+import { CommonMultipleSelect } from './MultipleSelect';
 
 export default {
     title: 'Common/MultipleSelect',
-    component: CommonMultipleSelectField,
+    component: CommonMultipleSelect,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
 };
 
-const MultipleselectTemplate = (args) => <CommonMultipleSelectField {...args} />;
+const MultipleSelectTemplate = (args) => <CommonMultipleSelect {...args} />;
 
-export const BasicMultipleselect = MultipleselectTemplate.bind({});
+export const BasicMultipleSelect = MultipleSelectTemplate.bind({});
 
-BasicMultipleselect.args = {
+BasicMultipleSelect.args = {
     label: "Multiple Select Label",
     size: 'small',
     options: ["Basketball", "Badminton", "Baseball", "Swimming", "Tennis", "Football"],

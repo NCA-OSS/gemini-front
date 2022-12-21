@@ -9,11 +9,11 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import React from 'react';
 
-export function CommonMultipleSelectField(props) {
+export function CommonMultipleSelect(props) {
     const { label, options, size, fullWidth } = props;
     const theme = useTheme();
     const [data, onChange] = React.useState([]);
-    const labelColor = getBackgroundColor();
+    const labelColor = window.matchMedia('(prefers-color-scheme: dark)').matches ? "black" : "white";
   
     const handleChange = (event) => {
       const {
@@ -78,16 +78,7 @@ function getStyles(item, data, theme) {
     };
 };
 
-function getBackgroundColor() {
-  const matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if(matched)
-    return "black"
-  else
-	 return "white"
-};
-
-
-CommonMultipleSelectField.propTypes = {
+CommonMultipleSelect.propTypes = {
     label: PropTypes.string.isRequired,
     size: PropTypes.oneOf(['small', 'large']),
     options: PropTypes.array,
