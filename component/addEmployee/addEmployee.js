@@ -51,10 +51,10 @@ export default function AddEmployee(props) {
                 <div className={styles.card}>
                     <div className={styles.toggleButton}>
                         <h2>Contractor</h2>
-                        <div class={`${styles.button} ${styles.r}`} id={styles.button1}>
-                            <input type="checkbox" class={styles.checkbox} defaultChecked="false" onChange={e => handleChange(e)} />
-                            <div class={styles.knobs}></div>
-                            <div class={styles.layer}></div>
+                        <div className={`${styles.button} ${styles.r}`} id={styles.button1}>
+                            <input type="checkbox" className={styles.checkbox} defaultChecked={false} onChange={e => handleChange(e)} />
+                            <div className={styles.knobs}></div>
+                            <div className={styles.layer}></div>
                         </div>
                     </div>
 

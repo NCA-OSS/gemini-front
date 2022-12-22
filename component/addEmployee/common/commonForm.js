@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useRouter } from "next/router"
 import { style } from '@mui/system';
 import TextField from '@mui/material/TextField';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';

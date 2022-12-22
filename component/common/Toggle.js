@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import Switch from '@mui/material/Switch';
 
-
-
 export function CommonToggle(props) {
     const { onChange, size, disabled, color } = props;
 
