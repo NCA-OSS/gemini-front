@@ -8,7 +8,7 @@ export default function Home() {
 
 
   return (
-    <div class="m3 animate__animated animate__zoomIn">
+    <div className="m3 animate__animated animate__zoomIn">
       {/* <LoginForm /> */}
     </div>
 
