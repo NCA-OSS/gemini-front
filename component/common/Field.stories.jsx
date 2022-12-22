@@ -20,6 +20,8 @@ BasicInputField.args = {
     errorMsg: 'Please input something',
     size: 'small',
     fullWidth: false,
+    label: 'input',
+    name:'test field'
 };
 
 
