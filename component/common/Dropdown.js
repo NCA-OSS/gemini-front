@@ -5,10 +5,10 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 export function CommonDropdownField(props) {
-    const { label, data, onChange, options, size, fullWidth } = props;
+    const { label, data, onChange, options, size, fullWidth, name } = props;
 
     return (
-        <FormControl sx={{ mt: '16px', mb: '8px' }} size={size} fullWidth={fullWidth}>
+        <FormControl size={size} fullWidth={fullWidth} sx={{ m: 1.2 }}>
             <InputLabel id="demo-simple-select-helper-label">{label}</InputLabel>
             <Select
                 labelId="demo-simple-select-helper-label"
@@ -16,14 +16,17 @@ export function CommonDropdownField(props) {
                 value={data}
                 label={label}
                 onChange={onChange}
+                name={name}
             >
                 {options.map((item, key) => {
                     return (
-                        <MenuItem value={10} key={key} > {item}</MenuItem>
+                        <MenuItem value={item} key={key} > {item}</MenuItem>
                     )
                 })}
             </Select>
-        </FormControl>)
+
+        </FormControl>
+    )
 }
 
 CommonDropdownField.propTypes = {
@@ -33,4 +36,5 @@ CommonDropdownField.propTypes = {
     size: PropTypes.oneOf(['small', 'large']),
     options: PropTypes.array,
     fullWidth: PropTypes.bool,
+    name: PropTypes.string.isRequired,
 };

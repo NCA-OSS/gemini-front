@@ -10,52 +10,41 @@ import Box from '@mui/material/Box';
 import React from 'react';
 
 export function CommonMultipleSelect(props) {
-    const { label, options, size, fullWidth } = props;
-    const theme = useTheme();
-    const [data, onChange] = React.useState([]);
-    const labelColor = window.matchMedia('(prefers-color-scheme: dark)').matches ? "black" : "white";
-  
-    const handleChange = (event) => {
-      const {
-        target: { value },
-      } = event;
-      onChange(
-        // On autofill we get a stringified value.
-        typeof value === 'string' ? value.split(',') : value,
-      );
-    };
+  const { label, options, size, fullWidth, data, onChange, name } = props;
+  const theme = useTheme();
+  // const labelColor = window.matchMedia('(prefers-color-scheme: dark)').matches ? "black" : "white";
+  const labelColor = "white";
 
-    return (
-        <FormControl sx={{ mt: '16px', mb: '8px' }} size={size} fullWidth={fullWidth}>
-            <InputLabel id="demo-multiple-chip-label" sx={{ bgcolor: labelColor}}>{label}</InputLabel>
-            <Select
-                labelId="demo-multiple-chip-label"
-                id="demo-multiple-chip"
-                multiple
-                value={data}
-                label={label}
-                onChange={handleChange}
-                input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
-                renderValue={(selected) => (
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                    {selected.map((value) => (
-                      <Chip key={value} label={value} />
-                    ))}
-                  </Box>
-                )}
-                MenuProps={MenuProps}
-              >
-                {options.map((item, key) => {
-                    return <MenuItem
-                    key={key}
-                    value={item}
-                    style={getStyles(item, data, theme)}
-                  >
-                    {item}
-                  </MenuItem>
-                })}
-            </Select>
-        </FormControl>)
+  return (
+    <FormControl sx={{ m: 1.2 }} size={size} fullWidth={fullWidth}>
+      <InputLabel id="demo-multiple-chip-label" sx={{ bgcolor: labelColor }}>{label}</InputLabel>
+      <Select
+        name={name}
+        multiple
+        value={data}
+        label={label}
+        onChange={onChange}
+        input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
+        renderValue={(selected) => (
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+            {selected.map((value) => (
+              <Chip key={value} label={value} />
+            ))}
+          </Box>
+        )}
+        MenuProps={MenuProps}
+      >
+        {options.map((item, key) => {
+          return <MenuItem
+            key={key}
+            value={item}
+            style={getStyles(item, data, theme)}
+          >
+            {item}
+          </MenuItem>
+        })}
+      </Select>
+    </FormControl >)
 }
 
 const ITEM_HEIGHT = 48;
@@ -70,17 +59,20 @@ const MenuProps = {
 };
 
 function getStyles(item, data, theme) {
-    return {
-      fontWeight:
-        data.indexOf(item) === -1
-          ? theme.typography.fontWeightRegular
-          : theme.typography.fontWeightMedium,
-    };
+  return {
+    fontWeight:
+      data.indexOf(item) === -1
+        ? theme.typography.fontWeightRegular
+        : theme.typography.fontWeightMedium,
+  };
 };
 
 CommonMultipleSelect.propTypes = {
-    label: PropTypes.string.isRequired,
-    size: PropTypes.oneOf(['small', 'large']),
-    options: PropTypes.array,
-    fullWidth: PropTypes.bool,
+  data: PropTypes.array.isRequired,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  label: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['small', 'large']),
+  options: PropTypes.array,
+  fullWidth: PropTypes.bool,
 };
