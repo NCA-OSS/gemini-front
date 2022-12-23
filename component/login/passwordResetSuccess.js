@@ -10,8 +10,9 @@ import logo from '@/public/assets/images/RMS.png'
 //Style
 import styles from './loginForm.module.scss';
 
-export default function PasswordResetSuccess() {
-
+export default function PasswordResetSuccess(props) {
+  const { setStage } = props;
+  
   return (
     <div className='animate__animated animate__zoomIn'>
       <Image src={logo} alt="logo" width={500} height={100} />

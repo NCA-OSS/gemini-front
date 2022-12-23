@@ -23,8 +23,8 @@ export default function Home() {
     })
 
     return (
-        <div class="m3 animate__animated animate__zoomIn">
-            <div className={styles.card}>
+        <div className="m3 animate__animated animate__zoomIn">
+            <div className="w-[350px] h-[550px] bg-white rounded-lg my-40 mx-auto px-5 py-12">
                 {stage === 0 ? <LoginForm setStage={setStage} /> :
                     stage === 1 ? <ForgotPassword setStage={setStage} /> :
                         stage === 2 ? <CheckEmailPopUp setStage={setStage} /> :
