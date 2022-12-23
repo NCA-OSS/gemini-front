@@ -64,7 +64,7 @@ export default function LoginForm(props) {
                     />
                 </div>
                 <br />
-                <div class="flex-row-space-between">
+                <div className="flex-row-space-between">
                     <div className="inputlabel">PASSWORD</div>
                     <div><a onClick={() => setStage(1)} className="lined-link">Forgot password</a></div>
                 </div>
