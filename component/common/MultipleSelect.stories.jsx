@@ -15,6 +15,7 @@ const MultipleSelectTemplate = (args) => <CommonMultipleSelect {...args} />;
 export const BasicMultipleSelect = MultipleSelectTemplate.bind({});
 
 BasicMultipleSelect.args = {
+    data:[],
     label: "Multiple Select Label",
     size: 'small',
     options: ["Basketball", "Badminton", "Baseball", "Swimming", "Tennis", "Football"],

@@ -32,5 +32,6 @@ CommonInputField.propTypes = {
     errorMsg: PropTypes.string,
     size: PropTypes.oneOf(['small', 'large']),
     fullWidth: PropTypes.bool,
+    label: PropTypes.string.isRequired,
 };
 

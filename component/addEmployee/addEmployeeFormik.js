@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik } from 'formik';
 import errorMsg from '../constant/errorMsg';
 import { CommonInputField } from '../common/Field';
 import { CommonDropdownField } from '../common/Dropdown';
 import { emailValidation } from '../validate/emailValidation';
 import { tribeList } from '../constant/tribe';
+import { CommonMultipleSelect } from '../common/MultipleSelect';
+import { CommonButton } from '../common/Button';
 
 export default function AddEmployeeFormik() {
 
@@ -20,15 +22,25 @@ export default function AddEmployeeFormik() {
 
 
     const submitForm = (values, setSubmitting) => {
-        alert(JSON.stringify(values, null, 2));
-        setSubmitting(false);
+        setSubmitting(true);
+        setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+        }, 5000);
     }
+
+    const initialValues = {
+        email: '',
+        fullName: '',
+        tribe: '',
+        skills: [],
+    };
 
     return (
 
         <div>
             <Formik
-                initialValues={{ email: '', fullName: '', tribe: '' }}
+                initialValues={initialValues}
                 validate={values => handleValidation(values)}
                 onSubmit={(values, { setSubmitting }) => { submitForm(values, setSubmitting) }}
             >
@@ -70,9 +82,23 @@ export default function AddEmployeeFormik() {
                             options={tribeList}
                             fullWidth
                         />
-                        <button type="submit" disabled={isSubmitting}>
-                            Submit
-                        </button>
+                        <CommonMultipleSelect
+                            name="skills"
+                            data={values.skills}
+                            onChange={handleChange}
+                            label="Multiple Select Label"
+                            size='small'
+                            options={["Basketball", "Badminton", "Baseball", "Swimming", "Tennis", "Football"]}
+                            fullWidth
+                        />
+                        <CommonButton
+                            data="Submit"
+                            size="small"
+                            fullWidth={false}
+                            disabled={isSubmitting}
+                            variant="contained"
+                            type="submit"
+                            isLoading={isSubmitting} />
                     </form>
                 )}
             </Formik>

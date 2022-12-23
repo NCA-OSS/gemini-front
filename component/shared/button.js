@@ -7,7 +7,7 @@ import PasswordResetSuccess from '../login/passwordResetSuccess'
 import loading from '@/public/assets/gif/loader.gif'
 //Style
 import styles from './button.module.scss';
-import loadingGif from '@/public/assets/gif/loader.gif';
+import loadingGif from '/public/assets/gif/loader.gif';
 
 export function BasicButtonWithLoader(props) {
   const { title, onClick, load, disable } = props
